@@ -1,7 +1,7 @@
 package main
 
 import (
-	routers "tasks-dispatcher/internal/apiserver/api/controllers"
+	routers "tasks-dispatcher/internal/apiserver/api/routers"
 )
 
 func main() {
