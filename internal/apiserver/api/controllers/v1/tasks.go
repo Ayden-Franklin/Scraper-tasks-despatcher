@@ -3,8 +3,11 @@ package api
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"tasks-dispatcher/internal/apiserver/redis"
 )
 
 func TaskAllocate(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"tasks": []interface{}{"B07FKM7SLJ","B004QOAS8A"}})
+	asin := redis.PopItem()
+
+	c.JSON(http.StatusOK, gin.H{"tasks": asin})
 }
